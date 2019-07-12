@@ -20,29 +20,29 @@ sys-process/lsof"
 S="${WORKDIR}"
 
 src_install() {
-insinto /;
+    insinto /;
 
-# install in /opt/enpass
-ENPASS_HOME=/opt/enpass
+    # install in /opt/enpass
+    ENPASS_HOME=/opt/enpass
 
-doins -r usr/;
+    doins -r usr/;
 
-doins -r opt/
+    doins -r opt/
 
-fperms +x ${ENPASS_HOME}/Enpass
-fperms +x ${ENPASS_HOME}/importer_enpass
+    fperms +x ${ENPASS_HOME}/Enpass
+    fperms +x ${ENPASS_HOME}/importer_enpass
 
-dosym ${ENPASS_HOME}/Enpass /usr/bin/enpass
+    dosym ${ENPASS_HOME}/Enpass /usr/bin/enpass
 }
 
 pkg_postinst() {
-        gnome2_icon_cache_update
-        xdg_mimeinfo_database_update
-        xdg_desktop_database_update
+    gnome2_icon_cache_update
+    xdg_mimeinfo_database_update
+    xdg_desktop_database_update
 }
 
 pkg_postrm() {
-        gnome2_icon_cache_update
-        xdg_mimeinfo_database_update
-        xdg_desktop_database_update
+    gnome2_icon_cache_update
+    xdg_mimeinfo_database_update
+    xdg_desktop_database_update
 }
