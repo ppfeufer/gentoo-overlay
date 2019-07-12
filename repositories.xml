@@ -1,0 +1,12 @@
+<repositories version="1.0">
+    <repo priority="50" quality="experimental" status="unofficial">
+        <name>ppfeufer</name>
+        <description>ppfeufer's overlay for sharing ebuilds</description>
+        <homepage>https://github.com/ppfeufer/gentoo-overlay</homepage>
+        <owner>
+            <email>djsmiley2k@gmail.com</email>
+            <name>Peter Pfeufer</name>
+        </owner>
+        <source type="git">https://github.com/ppfeufer/gentoo-overlay.git</source>
+    </repo>
+</repositories>
