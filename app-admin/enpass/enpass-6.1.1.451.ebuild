@@ -6,7 +6,7 @@ EAPI=7
 
 DESCRIPTION="Enpass password manager"
 HOMEPAGE="https://www.enpass.io/"
-SRC_URI="https://apt.enpass.io/pool/main/e/enpass/enpass_6.1.1.451_amd64.deb"
+SRC_URI="https://apt.enpass.io/pool/main/e/enpass/enpass_${PV}_amd64.deb"
 
 LICENSE="MIT"
 SLOT="0"
@@ -14,8 +14,10 @@ KEYWORDS="amd64"
 
 inherit unpacker
 
-RDEPEND="x11-libs/libXScrnSaver
-sys-process/lsof"
+RDEPEND="
+        x11-libs/libXScrnSaver
+        sys-process/lsof
+"
 
 S="${WORKDIR}"
 
