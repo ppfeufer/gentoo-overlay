@@ -15,9 +15,10 @@ KEYWORDS="amd64"
 inherit unpacker
 
 RDEPEND="
-        x11-libs/libXScrnSaver
-        sys-process/lsof
+    x11-libs/libXScrnSaver
+    sys-process/lsof
 "
+    
 
 S="${WORKDIR}"
 
