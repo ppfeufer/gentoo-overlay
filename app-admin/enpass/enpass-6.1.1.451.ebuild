@@ -8,7 +8,7 @@ DESCRIPTION="Enpass password manager"
 HOMEPAGE="https://www.enpass.io/"
 SRC_URI="https://apt.enpass.io/pool/main/e/enpass/enpass_${PV}_amd64.deb"
 
-LICENSE="MIT"
+LICENSE="SINEW"
 SLOT="0"
 KEYWORDS="amd64"
 
@@ -17,6 +17,7 @@ inherit unpacker
 RDEPEND="
     x11-libs/libXScrnSaver
     sys-process/lsof
+    net-misc/curl
 "
     
 
