@@ -1,12 +1,13 @@
 <repositories version="1.0">
-    <repo priority="50" quality="experimental" status="unofficial">
-        <name>ppfeufer</name>
-        <description>ppfeufer's overlay for sharing ebuilds</description>
+    <repo priority="50" quality="experimental">
+        <name>ppfeufer-gentoo-overlay</name>
+        <description>ppfeufer's personal overlay.</description>
         <homepage>https://github.com/ppfeufer/gentoo-overlay</homepage>
         <owner>
-            <email>develop@ppfeufer.de</email>
+            <email>info@ppfeufer.de</email>
             <name>Peter Pfeufer</name>
         </owner>
         <source type="git">https://github.com/ppfeufer/gentoo-overlay.git</source>
+        <feed>https://github.com/ppfeufer/gentoo-overlay/commits/master.atom</feed>
     </repo>
 </repositories>
