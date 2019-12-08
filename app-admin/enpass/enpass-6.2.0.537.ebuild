@@ -48,7 +48,7 @@ src_install() {
     doins -r opt/enpass/.
     fperms +x /opt/enpass/Enpass
     fperms +x /opt/enpass/importer_enpass
-    dosym ../..//opt/enpass/Enpass /usr/bin/enpass
+    dosym ../../opt/enpass/Enpass /usr/bin/enpass
 
     insinto /usr/share/mime/packages
     doins usr/share/mime/packages/application-enpass.xml
@@ -59,10 +59,12 @@ src_install() {
     dodoc usr/share/doc/enpass/changelog
 
     local size
+
     for size in 16 22 24 32 48 ; do
         doicon -c status -s ${size} usr/share/icons/hicolor/${size}x${size}/status/enpass-status.png
         doicon -c status -s ${size} usr/share/icons/hicolor/${size}x${size}/status/enpass-status-dark.png
     done
+
     for size in 16 24 32 48 64 96 128 256; do
         doicon -s ${size} usr/share/icons/hicolor/${size}x${size}/apps/enpass.png
     done
