@@ -35,7 +35,6 @@ RDEPEND="
 	${COMMON_DEPEND}
 	media-libs/vulkan-loader[${MULTILIB_USEDEP}]
 	|| (
-		>=app-emulation/wine-d3d9-4.5
 		>=app-emulation/wine-staging-4.5
 		>=app-emulation/wine-vanilla-4.5
 	)

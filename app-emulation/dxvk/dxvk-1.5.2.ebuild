@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -35,7 +35,6 @@ RDEPEND="
 	${COMMON_DEPEND}
 	media-libs/vulkan-loader[${MULTILIB_USEDEP}]
 	|| (
-		>=app-emulation/wine-d3d9-4.5
 		>=app-emulation/wine-staging-4.5
 		>=app-emulation/wine-vanilla-4.5
 	)
