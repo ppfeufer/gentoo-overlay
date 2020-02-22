@@ -43,6 +43,10 @@ RDEPEND="
 	)
 "
 
+PATCHES=(
+	"${FILESDIR}/1.5.4-fix_compilation_with_wine-5.2.patch"
+)
+
 pkg_pretend () {
 	if ! use abi_x86_64 && ! use abi_x86_32; then
 		eerror "You need to enable at least one of abi_x86_32 and abi_x86_64."

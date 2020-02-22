@@ -25,19 +25,18 @@ else
 fi
 IUSE="video_cards_nvidia"
 
-COMMON_DEPEND="virtual/wine[${MULTILIB_USEDEP}]"
 DEPEND="
-	${COMMON_DEPEND}
 	dev-util/vulkan-headers
 	dev-util/glslang
 "
-RDEPEND="
-	${COMMON_DEPEND}
-	media-libs/vulkan-loader[${MULTILIB_USEDEP}]
+BDEPEND="
 	|| (
-		>=app-emulation/wine-staging-4.5
-		>=app-emulation/wine-vanilla-4.5
+		>=app-emulation/wine-staging-4.5[${MULTILIB_USEDEP}]
+		>=app-emulation/wine-vanilla-4.5[${MULTILIB_USEDEP}]
 	)
+"
+RDEPEND="
+	media-libs/vulkan-loader[${MULTILIB_USEDEP}]
 	|| (
 		video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-440.31 )
 		>=media-libs/mesa-19.2
