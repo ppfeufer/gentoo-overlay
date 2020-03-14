@@ -1,0 +1,12 @@
+diff --git a/usr/share/applications/insync.desktop b/usr/share/applications/insync.desktop
+index a328b53..0664ebe 100644
+--- a/usr/share/applications/insync.desktop
++++ b/usr/share/applications/insync.desktop
+@@ -6,6 +6,6 @@ GenericName=Insync
+ Comment=Launch Insync
+ Icon=insync
+ Categories=Network;
+-Exec=insync start
++Exec=insync start --ca-path=/etc/ssl/certs
+ TryExec=insync
+ Terminal=false
