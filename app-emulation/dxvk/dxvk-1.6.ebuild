@@ -35,7 +35,6 @@ DEPEND="
     dev-util/vulkan-headers
     dev-util/glslang
 "
-
 BDEPEND="
     || (
         >=app-emulation/wine-staging-4.5[${MULTILIB_USEDEP}]
@@ -50,6 +49,10 @@ RDEPEND="
         >=media-libs/mesa-19.2
     )
 "
+
+PATCHES=(
+    "${FILESDIR}/1.6-fix-setEvent-error.patch"
+)
 
 pkg_pretend () {
     if ! use abi_x86_64 && ! use abi_x86_32; then
