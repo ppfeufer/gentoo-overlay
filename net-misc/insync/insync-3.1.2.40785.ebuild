@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="
+    >=sys-libs/glibc-2.29
+"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
