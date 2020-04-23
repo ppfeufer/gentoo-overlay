@@ -69,9 +69,12 @@ pkg_pretend () {
         use abi_x86_32 && categories+=("cross-i686-w64-mingw32")
 
         for cat in ${categories[@]}; do
-            if ! has_version -b "${cat}/gcc"; then
-                eerror "${cat}/gcc is not installed."
-                elog "See <https://wiki.gentoo.org/wiki/Mingw> on how to install it."
+            if ! has_version -b "${cat}/mingw64-runtime[libraries]" ||
+                    ! has_version -b "${cat}/gcc"; then
+                eerror "The ${cat} toolchain is not properly installed."
+                eerror "Make sure to install ${cat}/gcc with EXTRA_ECONF=\"--enable-threads=posix\""
+                eerror "and ${cat}/mingw64-runtime with USE=\"libraries\"."
+                elog "See <https://wiki.gentoo.org/wiki/Mingw> for more information."
                 einfo "In short:"
                 einfo "echo '~${cat}/mingw64-runtime-7.0.0 ~amd64' >> \\"
                 einfo "    /etc/portage/package.accept_keywords/mingw"
@@ -83,6 +86,8 @@ pkg_pretend () {
                 einfo "echo '${cat}/mingw64-runtime libraries' >> \\"
                 einfo "    /etc/portage/package.use/mingw"
                 einfo "emerge --oneshot ${cat}/gcc ${cat}/mingw64-runtime"
+
+                einfo "Alternatively you can install app-emulation/dxvk-bin from the “guru” repo."
                 die
             fi
         done
@@ -183,6 +188,8 @@ multilib_src_install_all() {
     insinto etc
 
     doins "dxvk.conf"
+
+    default
 }
 
 pkg_postinst() {
