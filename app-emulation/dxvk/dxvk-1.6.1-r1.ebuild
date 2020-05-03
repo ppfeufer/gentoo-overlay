@@ -67,9 +67,10 @@ pkg_pretend () {
         use abi_x86_64 && categories+=("cross-x86_64-w64-mingw32")
         use abi_x86_32 && categories+=("cross-i686-w64-mingw32")
 
-        local thread_model="$(LC_ALL=C ${cat}-gcc -v 2>&1 \
-                            | grep 'Thread model' | cut -d' ' -f3)"
         for cat in ${categories[@]}; do
+            local thread_model="$(LC_ALL=C ${cat}-gcc -v 2>&1 \
+                | grep 'Thread model' | cut -d' ' -f3)"
+
             if ! has_version -b "${cat}/mingw64-runtime[libraries]" ||
                     ! has_version -b "${cat}/gcc" ||
                     [[ "${thread_model}" != "posix" ]]; then
