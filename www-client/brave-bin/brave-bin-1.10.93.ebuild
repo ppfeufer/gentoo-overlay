@@ -19,7 +19,7 @@ SRC_URI="https://github.com/brave/brave-browser/releases/download/v${PV}/brave-v
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="gnome-keyring"
 
 DEPEND="gnome-base/gconf:2"
@@ -84,9 +84,7 @@ S=${WORKDIR}
 
 src_prepare() {
     pushd "${S}/locales" > /dev/null || die
-
-    chromium_remove_language_paks
-
+        chromium_remove_language_paks
     popd > /dev/null || die
 
     default
@@ -98,10 +96,10 @@ src_install() {
     dodir ${BRAVE_HOME%/*}
 
     insinto ${BRAVE_HOME}
-    doins -r *
+        doins -r *
 
     exeinto ${BRAVE_HOME}
-    doexe brave
+        doexe brave
 
     dosym ${BRAVE_HOME}/brave /usr/bin/${PN} || die
 
