@@ -1,4 +1,4 @@
- 
+
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
@@ -16,16 +16,20 @@ IUSE=""
 RESTRICT="strip"
 S="${WORKDIR}"
 
+RDEPEND="net-print/cups"
+
 #TODO: ???
 LICENSE="EULA"
 
 src_prepare() {
-	unpack ./control.tar.gz
-	unpack ./data.tar.xz
-	default
+    unpack ./control.tar.gz
+    unpack ./data.tar.xz
+
+    default
 }
 
 src_install() {
-	doins -r usr
-	fperms 755 /usr/share/gitkraken/gitkraken
+    doins -r usr
+
+    fperms 755 /usr/share/gitkraken/gitkraken
 }
