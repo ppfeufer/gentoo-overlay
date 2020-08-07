@@ -13,7 +13,10 @@ SRC_URI="https://apt.enpass.io/pool/main/e/${PN}/${PN}_${PV}_amd64.deb"
 LICENSE="SINEW-EULA"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+
+# use flags
+IUSE="pulseaudio"
+
 # Distribution is restricted by the legal notice
 RESRICT="mirror"
 
@@ -24,7 +27,8 @@ RDEPEND="
     media-libs/fontconfig
     media-libs/freetype:2
     media-libs/mesa
-    media-sound/pulseaudio
+    pulseaudio? ( media-sound/pulseaudio )
+    !pulseaudio? ( media-sound/apulse )
     net-misc/curl
     net-print/cups
     sys-apps/dbus
@@ -41,14 +45,29 @@ RDEPEND="
     x11-libs/pango"
 BDEPEND=""
 
+PATCHES=(
+    "${FILESDIR}/enpass-dektopfile.patch"
+)
+
 S="${WORKDIR}"
 
 src_install() {
-    insinto /opt/enpass
-    doins -r opt/enpass/.
-    fperms +x /opt/enpass/Enpass
-    fperms +x /opt/enpass/importer_enpass
-    dosym ../../opt/enpass/Enpass /usr/bin/enpass
+    ENPASS_HOME=/opt/enpass
+
+    insinto ${ENPASS_HOME}
+    doins -r ${ENPASS_HOME}/.
+    fperms +x ${ENPASS_HOME}/Enpass
+    fperms +x ${ENPASS_HOME}/importer_enpass
+#    dosym ../..${ENPASS_HOME}/Enpass /usr/bin/enpass
+
+    dodir /usr/bin
+    cat <<-EOF >"${D}"/usr/bin/enpass || die
+#! /bin/sh
+LD_LIBRARY_PATH="/usr/$(get_libdir)/apulse" \\
+exec ${ENPASS_HOME}/Enpass "\$@"
+EOF
+
+    fperms +x /usr/bin/enpass
 
     insinto /usr/share/mime/packages
     doins usr/share/mime/packages/application-enpass.xml
