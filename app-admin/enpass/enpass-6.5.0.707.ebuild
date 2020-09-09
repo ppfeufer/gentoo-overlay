@@ -52,19 +52,16 @@ PATCHES=(
 S="${WORKDIR}"
 
 src_install() {
-    ENPASS_HOME=/opt/enpass
-
-    insinto ${ENPASS_HOME}
-    doins -r ${ENPASS_HOME}/.
-    fperms +x ${ENPASS_HOME}/Enpass
-    fperms +x ${ENPASS_HOME}/importer_enpass
-#    dosym ../..${ENPASS_HOME}/Enpass /usr/bin/enpass
+    insinto /opt/enpass
+    doins -r opt/enpass/.
+    fperms +x /opt/enpass/Enpass
+    fperms +x /opt/enpass/importer_enpass
 
     dodir /usr/bin
     cat <<-EOF >"${D}"/usr/bin/enpass || die
 #! /bin/sh
 LD_LIBRARY_PATH="/usr/$(get_libdir)/apulse" \\
-exec ${ENPASS_HOME}/Enpass "\$@"
+exec /opt/enpass/Enpass "\$@"
 EOF
 
     fperms +x /usr/bin/enpass
