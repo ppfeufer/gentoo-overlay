@@ -4,7 +4,7 @@
 EAPI=7
 
 MULTILIB_COMPAT=( abi_x86_{32,64} )
-inherit flag-o-matic meson multilib-minimal ninja-utils
+inherit flag-o-matic meson multilib-minimal
 if [[ "${PV}" == "9999" ]]; then
     inherit git-r3
 fi
