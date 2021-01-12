@@ -12,7 +12,7 @@ Ebuilds I no longer use might be deleted.
 
 ## Add this repository
 
-### Useing [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository)
+### Using [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository)
 
 ```bash
 eselect repository enable ppfeufer-gentoo-overlay
