@@ -97,7 +97,6 @@ src_prepare() {
     if [[ $(is-flag "-march=*") == "true" ]]; then
         append-flags "-mno-avx"
     fi
-    replace-flags "-O3" "-O2"
 
     sed -i "s|^basedir=.*$|basedir=\"${EPREFIX}\"|" setup_dxvk.sh || die
 
