@@ -1,19 +1,26 @@
-# gentoo-overlay
+# Portage Repository "ppfeufer-gentoo-overlay"
 
-My personal Gentoo overlay
+This is an unofficial and privately maintained repository for
+[Portage](https://wiki.gentoo.org/wiki/Project:Portage), the 
+package manager of [Gentoo Linux](https://gentoo.org/).
 
-### layman
-Update laymans overlay list first
+All ebuilds in this overlay are privately maintained and not 
+officially supported by the Gentoo portage maintainer team.
+
+Ebuilds I no longer use might be deleted.
+
+
+## Add this repository
+
+### Useing [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository)
+
 ```bash
-layman -f
+eselect repository enable ppfeufer-gentoo-overlay
 ```
 
-Add the overlay
-```bash
-layman -a ppfeufer-gentoo-overlay
-```
 
-If that doesn't work for you, try this
+### Using [layman](https://wiki.gentoo.org/wiki/Layman)
+
 ```bash
-layman -f -o https://raw.githubusercontent.com/ppfeufer/gentoo-overlay/master/ppfeufer-gentoo-overlay.xml -a ppfeufer-gentoo-overlay
+layman -fa ppfeufer-gentoo-overlay
 ```
