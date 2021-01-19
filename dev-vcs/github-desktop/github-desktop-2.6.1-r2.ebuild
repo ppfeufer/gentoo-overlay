@@ -13,7 +13,8 @@ LICENSE="GitHub"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=">=gnome-base/gconf-3.2.6-r4 
+RDEPEND="
+    >=gnome-base/gconf-3.2.6-r4 
     >=x11-libs/libnotify-0.7.8
     >=dev-libs/libappindicator-12.10.0-r301
     >=x11-libs/libXtst-1.2.3-r1
@@ -21,12 +22,14 @@ RDEPEND=">=gnome-base/gconf-3.2.6-r4 
     >=net-misc/curl-7.68.0
     >=app-crypt/libsecret-0.18.8
     dev-libs/openssl-compat:1.0.0
-    >=gnome-base/gnome-keyring-3.31.91-r1"
+    >=gnome-base/gnome-keyring-3.31.91-r1
+"
 
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
-QA_PREBUILT="usr/lib64/github-desktop/swiftshader/*.so
+QA_PREBUILT="
+    usr/lib64/github-desktop/swiftshader/*.so
     usr/lib64/github-desktop/github-desktop
     usr/lib64/github-desktop/resources/app/git/libexec/git-core/git-daemon
     usr/lib64/github-desktop/resources/app/git/libexec/git-core/git-credential-store
@@ -44,12 +47,14 @@ QA_PREBUILT="usr/lib64/github-desktop/swiftshader/*.so
     usr/lib64/github-desktop/resources/app/git/libexec/git-core/git-fast-import
     usr/lib64/github-desktop/resources/app/git/bin/git
     usr/lib64/github-desktop/*.so
-    usr/bin/github-desktop"
+    usr/bin/github-desktop
+"
 
 
 src_install() {
     insinto /usr/share
     doins -r usr/share/{applications,icons,lintian}
+
     insinto /usr/share/doc/"${P}"
     doins usr/share/doc/github-desktop/copyright
 
