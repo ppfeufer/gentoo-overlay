@@ -13,6 +13,9 @@ LICENSE="GitHub"
 SLOT="0"
 KEYWORDS="~amd64"
 
+# use flags
+IUSE="alacritty"
+
 RDEPEND="
     >=gnome-base/gconf-3.2.6-r4 
     >=x11-libs/libnotify-0.7.8
@@ -23,6 +26,7 @@ RDEPEND="
     >=app-crypt/libsecret-0.18.8
     dev-libs/openssl-compat:1.0.0
     >=gnome-base/gnome-keyring-3.31.91-r1
+    alacritty? ( x11-terms/alacritty )
 "
 
 DEPEND="${RDEPEND}"
