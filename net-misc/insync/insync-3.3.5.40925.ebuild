@@ -10,6 +10,8 @@ HOMEPAGE="https://www.insynchq.com/"
 
 SRC_URI="http://s.insynchq.com/builds/insync-${PV}-fc30.x86_64.rpm"
 
+RESTRICT="strip"
+
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -23,7 +25,7 @@ BDEPEND=""
 
 PATCHES=(
     "${FILESDIR}/insync-3-fix-ca-path.patch"
-    "${FILESDIR}/insync-3.2.7-lib64.patch"
+    "${FILESDIR}/insync-3-lib64.patch"
 )
 
 src_unpack() {
