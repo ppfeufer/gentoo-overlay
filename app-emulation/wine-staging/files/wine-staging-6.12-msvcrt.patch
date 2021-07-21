@@ -1,0 +1,28 @@
+From: Jacek Caban <jacek@codeweavers.com>
+Subject: [PATCH] advapi32: Link to msvcrt.dll.
+Message-Id: <bff9c8da-2899-58b7-c634-c0df9169079f@codeweavers.com>
+Date: Wed, 21 Jul 2021 15:15:51 +0200
+
+
+Some applications expect msvcrt.dll to be pulled by system DLLs. On 
+Windows, loading advapi32 causes msvcrt.dll to be loaded.
+
+Wine-Bug: https://bugs.winehq.org/show_bug.cgi?id=51465
+Signed-off-by: Jacek Caban <jacek@codeweavers.com>
+---
+  dlls/advapi32/Makefile.in | 2 +-
+  1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/dlls/advapi32/Makefile.in b/dlls/advapi32/Makefile.in
+index 5175563cea1..11b3b5aaaf7 100644
+--- a/dlls/advapi32/Makefile.in
++++ b/dlls/advapi32/Makefile.in
+@@ -1,7 +1,7 @@
+ EXTRADEFS = -D_ADVAPI32_
+ MODULE    = advapi32.dll
+ IMPORTLIB = advapi32
+-IMPORTS   = kernelbase sechost
++IMPORTS   = kernelbase sechost msvcrt
+ DELAYIMPORTS = rpcrt4
+ 
+ EXTRADLLFLAGS = -mno-cygwin
