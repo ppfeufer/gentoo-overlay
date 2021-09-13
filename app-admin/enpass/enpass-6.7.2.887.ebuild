@@ -56,6 +56,7 @@ src_install() {
     doins -r opt/enpass/.
     fperms +x /opt/enpass/Enpass
     fperms +x /opt/enpass/importer_enpass
+    fperms +x /opt/enpass/wifisyncserver_bin
 
     dodir /usr/bin
     cat <<-EOF >"${D}"/usr/bin/enpass || die
