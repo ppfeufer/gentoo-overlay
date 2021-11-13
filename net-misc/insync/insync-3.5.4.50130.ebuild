@@ -19,6 +19,9 @@ IUSE=""
 
 DEPEND="
     >=sys-libs/glibc-2.29
+    x11-misc/xdg-utils
+    dev-libs/nss
+    app-crypt/gnupg
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
