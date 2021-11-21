@@ -22,6 +22,10 @@ DEPEND="
     x11-misc/xdg-utils
     dev-libs/nss
     app-crypt/gnupg
+    media-libs/libglvnd
+    dev-qt/qtvirtualkeyboard
+    dev-libs/wayland
+    dev-libs/libthai
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
