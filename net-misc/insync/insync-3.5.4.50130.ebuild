@@ -31,6 +31,8 @@ PATCHES=(
     "${FILESDIR}/insync-3-lib64.patch"
 )
 
+QA_FLAGS_IGNORED=".*"
+
 src_unpack() {
     unpack "insync_${PV}-buster_amd64.deb"
     unpack ${WORKDIR}"/data.tar.gz"
