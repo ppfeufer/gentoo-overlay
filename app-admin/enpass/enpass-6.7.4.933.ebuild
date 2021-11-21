@@ -51,6 +51,8 @@ PATCHES=(
 
 S="${WORKDIR}"
 
+QA_FLAGS_IGNORED=".*"
+
 src_install() {
     insinto /opt/enpass
     doins -r opt/enpass/.
