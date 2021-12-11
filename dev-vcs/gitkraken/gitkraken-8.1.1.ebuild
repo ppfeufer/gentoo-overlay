@@ -32,6 +32,7 @@ src_install() {
     doins -r usr
 
     fperms 755 /usr/share/gitkraken/gitkraken
+    fperms 755 /usr/share/gitkraken/resources/bin/gitkraken.sh
 }
 
 pkg_postinst() {
