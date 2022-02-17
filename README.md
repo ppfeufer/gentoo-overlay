@@ -37,3 +37,4 @@ layman -fa ppfeufer-gentoo-overlay
 | games-util/pyfa | [https://github.com/pyfa-org/Pyfa](https://github.com/pyfa-org/Pyfa) |
 | net-misc/insync | [https://www.insynchq.com/](https://www.insynchq.com/) |
 | net-voip/twinkle | [http://twinkle.dolezel.info/](http://twinkle.dolezel.info/) |
+| sys-boot/rpi-imager | [https://github.com/raspberrypi/rpi-imager](https://github.com/raspberrypi/rpi-imager) |
