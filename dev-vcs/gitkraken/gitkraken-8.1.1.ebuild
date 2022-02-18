@@ -1,7 +1,5 @@
-
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -22,23 +20,23 @@ RDEPEND="net-print/cups"
 LICENSE="EULA"
 
 src_prepare() {
-    unpack ./control.tar.gz
-    unpack ./data.tar.xz
+	unpack ./control.tar.gz
+	unpack ./data.tar.xz
 
-    default
+	default
 }
 
 src_install() {
-    doins -r usr
+	doins -r usr
 
-    fperms 755 /usr/share/gitkraken/gitkraken
-    fperms 755 /usr/share/gitkraken/resources/bin/gitkraken.sh
+	fperms 755 /usr/share/gitkraken/gitkraken
+	fperms 755 /usr/share/gitkraken/resources/bin/gitkraken.sh
 }
 
 pkg_postinst() {
-    xdg_desktop_database_update
+	xdg_desktop_database_update
 }
 
 pkg_postrm() {
-    xdg_desktop_database_update
+	xdg_desktop_database_update
 }
