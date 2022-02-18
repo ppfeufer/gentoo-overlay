@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 IUSE="alacritty"
 
 RDEPEND="
-    >=gnome-base/gconf-3.2.6-r4 
+    >=gnome-base/gconf-3.2.6-r4
     >=x11-libs/libnotify-0.7.8
     >=dev-libs/libappindicator-12.10.0-r301
     >=x11-libs/libXtst-1.2.3-r1
@@ -25,7 +25,7 @@ RDEPEND="
     >=net-misc/curl-7.68.0
     >=app-crypt/libsecret-0.18.8
     dev-libs/openssl-compat:1.0.0
-    >=gnome-base/gnome-keyring-3.31.91-r1
+    >=gnome-base/gnome-keyring
     alacritty? ( x11-terms/alacritty )
 "
 
@@ -53,7 +53,6 @@ QA_PREBUILT="
     usr/lib64/github-desktop/*.so
     usr/bin/github-desktop
 "
-
 
 src_install() {
     insinto /usr/share
