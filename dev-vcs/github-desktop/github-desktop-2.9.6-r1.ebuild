@@ -9,7 +9,7 @@ DESCRIPTION="GitHub Desktop is an open source Electron-based GitHub app"
 HOMEPAGE="https://desktop.github.com/"
 SRC_URI="https://github.com/shiftkey/desktop/releases/download/release-2.9.6-linux1/GitHubDesktop-linux-2.9.6-linux1.deb"
 
-LICENSE="GitHub"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
