@@ -51,6 +51,7 @@ PATCHES=(
 S="${WORKDIR}"
 
 QA_FLAGS_IGNORED=".*"
+QA_PRESTRIPPED="/opt/enpass/importer_enpass /opt/enpass/Enpass /opt/enpass/wifisyncserver_bin"
 
 src_install() {
 	insinto /opt/enpass
