@@ -8,7 +8,7 @@ inherit rpm xdg-utils
 DESCRIPTION="Advanced cross-platform Dropbox, Google Drive and Microsoft OneDrive client"
 HOMEPAGE="https://www.insynchq.com/"
 
-SRC_URI="http://s.insynchq.com/builds/insync_${PV}-buster_amd64.deb"
+SRC_URI="http://s.insynchq.com/builds/insync_${PV}-bullseye_amd64.deb"
 
 RESTRICT="strip"
 
@@ -39,7 +39,7 @@ QA_FLAGS_IGNORED=".*"
 QA_PREBUILT="*"
 
 src_unpack() {
-	unpack "insync_${PV}-buster_amd64.deb"
+	unpack "insync_${PV}-bullseye_amd64.deb"
 	unpack ${WORKDIR}"/data.tar.gz"
 
 	mkdir -p "${S}"
