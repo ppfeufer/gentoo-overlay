@@ -19,21 +19,12 @@ RDEPEND="net-print/cups"
 #TODO: ???
 LICENSE="EULA"
 
-#src_prepare() {
-#	unpack ./control.tar.xz
-#	unpack ./data.tar.xz
-#
-#	default
-#}
-
 src_install() {
 	insinto /usr/share
 	doins -r usr/share/{gitkraken,applications,pixmaps,lintian}
 
 	insinto /usr/share/doc/"${P}"
 	doins usr/share/doc/gitkraken/copyright
-
-	#doins -r usr
 
 	fperms 755 /usr/share/gitkraken/gitkraken
 	fperms 755 /usr/share/gitkraken/resources/bin/gitkraken.sh
