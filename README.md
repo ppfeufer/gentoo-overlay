@@ -30,8 +30,6 @@ layman -fa ppfeufer-gentoo-overlay
 | Package | URL |
 |---|---|
 | app-admin/enpass | [https://www.enpass.io/](https://www.enpass.io/) |
-| app-emulation/dxvk | [https://github.com/doitsujin/dxvk](https://github.com/doitsujin/dxvk) |
-| app-emulation/dxvk-bin | [https://github.com/doitsujin/dxvk](https://github.com/doitsujin/dxvk) |
 | dev-vcs/github-desktop | [https://desktop.github.com/](https://desktop.github.com/) |
 | dev-vcs/gitkraken | [https://www.gitkraken.com/](https://www.gitkraken.com/) |
 | games-util/pyfa | [https://github.com/pyfa-org/Pyfa](https://github.com/pyfa-org/Pyfa) |
