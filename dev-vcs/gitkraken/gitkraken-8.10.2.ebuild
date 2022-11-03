@@ -28,6 +28,7 @@ src_install() {
 
 	fperms 755 /usr/share/gitkraken/gitkraken
 	fperms 755 /usr/share/gitkraken/resources/bin/gitkraken.sh
+	fperms 755 /usr/share/gitkraken/resources/app.asar.unpacked/node_modules/@axosoft/nodegit/build/Release/*.node
 }
 
 pkg_postinst() {
