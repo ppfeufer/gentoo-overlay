@@ -22,6 +22,7 @@ RDEPEND="
 	x11-misc/xdg-utils
 	dev-libs/nss
 	app-crypt/gnupg
+	dev-libs/libthai
 "
 
 PATCHES=(
