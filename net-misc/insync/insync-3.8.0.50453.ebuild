@@ -23,6 +23,7 @@ RDEPEND="
 	dev-libs/nss
 	app-crypt/gnupg
 	dev-libs/libthai
+	sys-devel/gcc
 "
 
 PATCHES=(
@@ -52,6 +53,13 @@ src_install() {
 
 	rm -Rf "${D}"/usr/lib64/.build-id
 	rm -rf "${D}"/usr/share/man/man1/
+
+	# Make sure it starts on KDE
+	# There is a bug that on some KDE systems Insync doesn't start properly
+	# Or crashes when the tray icon is clicked
+	# This is because Insync is using bundled libstdc++.so.6 which might lead to a version conflict
+	# So we remove it here
+	rm -Rf "${D}"/usr/lib64/insync/libstdc++.so.6
 
 	echo "SEARCH_DIRS_MASK=\"/usr/lib*/insync\"" > "${T}/70-${PN}" || die
 
