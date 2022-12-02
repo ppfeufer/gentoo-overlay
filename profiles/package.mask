@@ -1,0 +1,10 @@
+# ppfeufer <infoo@ppfeufer.de> (2022-12-02)
+# Unmaintainable release policy, removal on 2022-12-31.
+#
+# Upstream maintainers decided on a release policy that has
+# become unmaintainable for me, since I cannot distinguish if
+# a release contains untested code or not. So I decided that
+# I no longer maintain this package for Gentoo.
+#
+# See: https://github.com/balena-io/etcher/issues/3853
+sys-boot/etcher-bin
