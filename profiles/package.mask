@@ -9,4 +9,4 @@
 # See: https://github.com/balena-io/etcher/issues/3853
 #
 # As an alternative feel free to have a look at sys-boot/rpi-imager
-sys-boot/etcher-bin:ppfeufer-gentoo-overlay
+sys-boot/etcher-bin::ppfeufer-gentoo-overlay
