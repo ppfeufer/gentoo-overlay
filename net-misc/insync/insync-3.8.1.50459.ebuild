@@ -27,7 +27,7 @@ RDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/insync-3-fix-ca-path.patch"
+	"${FILESDIR}/insync-3-fix-desktop-file.patch"
 	"${FILESDIR}/insync-3-lib64.patch"
 )
 
