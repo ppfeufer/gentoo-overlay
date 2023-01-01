@@ -34,5 +34,4 @@ layman -fa ppfeufer-gentoo-overlay
 | dev-vcs/gitkraken | [https://www.gitkraken.com/](https://www.gitkraken.com/) |
 | games-util/pyfa | [https://github.com/pyfa-org/Pyfa](https://github.com/pyfa-org/Pyfa) |
 | net-misc/insync | [https://www.insynchq.com/](https://www.insynchq.com/) |
-| sys-boot/etcher-bin | [https://www.balena.io/etcher/](https://www.balena.io/etcher/) |
 | sys-boot/rpi-imager | [https://github.com/raspberrypi/rpi-imager](https://github.com/raspberrypi/rpi-imager) |
