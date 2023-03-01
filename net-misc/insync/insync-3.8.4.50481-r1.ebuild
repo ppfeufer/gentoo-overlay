@@ -42,32 +42,39 @@ src_unpack() {
 	unpack "insync_${PV}-bullseye_amd64.deb"
 	unpack "${WORKDIR}/data.tar.gz"
 
-	mkdir -p "${S}"
-	mv "${WORKDIR}"/usr "${S}"/
+	mkdir -p "${S}"/opt
+	mv  "${WORKDIR}"/usr "${S}"/
+	mv "${S}"/usr/lib/insync "${S}"/opt/insync
+
 }
 
 src_install() {
+	insinto /
+
 	gzip -d usr/share/doc/insync/changelog.gz
 	dodoc usr/share/doc/insync/changelog
+	rm -rf "${WORKDIR}"/"${P}"/usr/share/doc
 
-	rm -rf "${WORKDIR}"/"${P}"/usr/share/doc/
+	dobin usr/bin/insync
+	rm -rf "${WORKDIR}"/"${P}"/usr/bin
 
-	cp -pPR "${WORKDIR}"/"${P}"/usr/ "${D}"/ || die "Installation failed"
-	mv "${D}"/usr/lib "${D}"/usr/lib64
+	mkdir -p "${D}"/opt
+	mv  "${S}"/opt/insync "${D}"/opt/insync || die "Installation failed"
+	cp -pPR  "${WORKDIR}"/"${P}"/usr/share "${D}"/usr || die "Installation failed"
 
-	rm -Rf "${D}"/usr/lib64/.build-id
+	rm -Rf "${D}"/opt/insync/.build-id
 	rm -rf "${D}"/usr/share/man/man1/
 
-	use wayland || rm -r "${D}/usr/lib64/insync/PySide2/plugins/wayland-graphics-integration-server" "${D}/usr/lib64/insync/libQt5WaylandCompositor.so.5" || die "Error removing wayland related files from install."
+	use wayland || rm -r "${D}/opt/insync/PySide2/plugins/wayland-graphics-integration-server" "${D}/opt/insync/libQt5WaylandCompositor.so.5" || die "Error removing wayland related files from install."
 
 	# Make sure it starts on KDE
 	# There is a bug that on some KDE systems Insync doesn't start properly
 	# Or crashes when the tray icon is clicked
 	# This is because Insync is using bundled libstdc++.so.6 which might lead to a version conflict
 	# So we remove it here
-	rm -Rf "${D}"/usr/lib64/insync/libstdc++.so.6
+	rm -Rf "${D}"/opt/insync/libstdc++.so.6
 
-	echo "SEARCH_DIRS_MASK=\"/usr/lib*/insync\"" > "${T}/70-${PN}" || die
+	echo "SEARCH_DIRS_MASK=\"/opt/insync\"" > "${T}/70-${PN}" || die
 
 	insinto "/etc/revdep-rebuild" && doins "${T}/70-${PN}" || die
 
