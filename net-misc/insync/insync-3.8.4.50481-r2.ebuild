@@ -25,12 +25,14 @@ RDEPEND="
 	sys-devel/gcc
 	>=sys-libs/glibc-2.31
 	x11-misc/xdg-utils
-	wayland? ( dev-libs/wayland )
-	"
+	wayland? (
+		dev-libs/wayland
+	)
+"
 
 PATCHES=(
 	"${FILESDIR}/insync-3-fix-desktop-file.patch"
-	)
+)
 
 QA_FLAGS_IGNORED=".*"
 QA_PREBUILT="*"
