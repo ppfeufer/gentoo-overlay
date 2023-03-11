@@ -17,7 +17,6 @@ KEYWORDS="~amd64"
 IUSE="alacritty"
 
 RDEPEND="
-	>=gnome-base/gconf-3.2.6-r5
 	>=x11-libs/libnotify-0.7.8
 	>=dev-libs/libappindicator-12.10.0-r301
 	>=x11-libs/libXtst-1.2.3-r1
