@@ -5,8 +5,8 @@
 <!-- TOC -->
 * [Portage Repository "ppfeufer-gentoo-overlay"](#portage-repository-ppfeufer-gentoo-overlay)
   * [Add this repository](#add-this-repository)
-    * [Using [eselect-repository]](#using-eselect-repository)
-    * [Using [layman]](#using-layman)
+    * [Using `eselect-repository`](#using-eselect-repository)
+    * [Using `layman`](#using-layman)
     * [Packages](#packages)
 <!-- TOC -->
 
@@ -27,14 +27,18 @@ officially supported by the Gentoo portage maintainer team.
 
 ## Add this repository
 
-### Using [eselect-repository]
+### Using `eselect-repository`
+
+See [eselect-repository]
 
 ```bash
 eselect repository enable ppfeufer-gentoo-overlay
 ```
 
 
-### Using [layman]
+### Using `layman`
+
+See [layman]
 
 ```bash
 layman -fa ppfeufer-gentoo-overlay
