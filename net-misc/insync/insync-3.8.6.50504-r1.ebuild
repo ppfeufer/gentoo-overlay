@@ -21,7 +21,7 @@ RDEPEND="
 	app-crypt/gnupg
 	dev-libs/libthai
 	dev-libs/nss
-	dev-qt/qtvirtualkeyboard
+	dev-qt/qtvirtualkeyboard:5
 	sys-devel/gcc
 	>=sys-libs/glibc-2.31
 	x11-misc/xdg-utils
