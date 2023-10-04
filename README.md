@@ -1,17 +1,18 @@
-# Portage Repository "ppfeufer-gentoo-overlay"
+# Portage Repository "ppfeufer-gentoo-overlay"<a name="portage-repository-ppfeufer-gentoo-overlay"></a>
 
----
+______________________________________________________________________
 
-<!-- TOC -->
-* [Portage Repository "ppfeufer-gentoo-overlay"](#portage-repository-ppfeufer-gentoo-overlay)
-  * [Add this repository](#add-this-repository)
-    * [Using `eselect-repository`](#using-eselect-repository)
-    * [Using `layman`](#using-layman)
-    * [Packages](#packages)
-<!-- TOC -->
+<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
 
----
+- [Portage Repository "ppfeufer-gentoo-overlay"](#portage-repository-ppfeufer-gentoo-overlay)
+  - [Add this repository](#add-this-repository)
+    - [Using `eselect-repository`](#using-eselect-repository)
+    - [Using `layman`](#using-layman)
+    - [Packages](#packages)
 
+<!-- mdformat-toc end -->
+
+______________________________________________________________________
 
 This is an unofficial and privately maintained repository for
 [Portage](https://wiki.gentoo.org/wiki/Project:Portage), the
@@ -24,10 +25,9 @@ officially supported by the Gentoo portage maintainer team.
 >
 > Ebuilds I no longer use might be deleted.
 
+## Add this repository<a name="add-this-repository"></a>
 
-## Add this repository
-
-### Using `eselect-repository`
+### Using `eselect-repository`<a name="using-eselect-repository"></a>
 
 See [eselect-repository]
 
@@ -35,8 +35,7 @@ See [eselect-repository]
 eselect repository enable ppfeufer-gentoo-overlay
 ```
 
-
-### Using `layman`
+### Using `layman`<a name="using-layman"></a>
 
 See [layman]
 
@@ -44,10 +43,10 @@ See [layman]
 layman -fa ppfeufer-gentoo-overlay
 ```
 
-### Packages
+### Packages<a name="packages"></a>
 
 | Package                | URL                                                                                    |
-|:-----------------------|:---------------------------------------------------------------------------------------|
+| :--------------------- | :------------------------------------------------------------------------------------- |
 | app-admin/enpass       | [https://www.enpass.io/](https://www.enpass.io/)                                       |
 | dev-vcs/github-desktop | [https://desktop.github.com/](https://desktop.github.com/)                             |
 | dev-vcs/gitkraken      | [https://www.gitkraken.com/](https://www.gitkraken.com/)                               |
@@ -56,7 +55,7 @@ layman -fa ppfeufer-gentoo-overlay
 | sys-boot/rpi-imager    | [https://github.com/raspberrypi/rpi-imager](https://github.com/raspberrypi/rpi-imager) |
 | sys-boot/ventoy-bin    | [https://www.ventoy.net/en/index.html](https://www.ventoy.net/en/index.html)           |
 
-
 <!-- Links -->
+
 [eselect-repository]: https://wiki.gentoo.org/wiki/Eselect/Repository "Gentoo Wiki: Eselect/Repository"
 [layman]: https://wiki.gentoo.org/wiki/Layman "Gentoo Wiki: Layman"
