@@ -2,10 +2,12 @@ diff --git a/usr/share/applications/gitkraken.desktop b/usr/share/applications/g
 index a328b53..0664ebe 100644
 --- a/usr/share/applications/gitkraken.desktop
 +++ b/usr/share/applications/gitkraken.desktop
-@@ -6,6 +6,6 @@ Name=GitKraken
+@@ -2,7 +2,7 @@
+ Name=GitKraken
  Comment=Unleash your repo
  GenericName=Git Client
 -Exec=/usr/share/gitkraken/gitkraken %U
 +Exec=/usr/bin/gitkraken %U
  Icon=/usr/share/pixmaps/gitkraken.png
  Type=Application
+ StartupNotify=true
