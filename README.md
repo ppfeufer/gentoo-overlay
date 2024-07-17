@@ -52,6 +52,7 @@ layman -fa ppfeufer-gentoo-overlay
 | dev-vcs/gitkraken      | [https://www.gitkraken.com/](https://www.gitkraken.com/)                               |
 | net-misc/insync        | [https://www.insynchq.com/](https://www.insynchq.com/)                                 |
 | sys-boot/rpi-imager    | [https://github.com/raspberrypi/rpi-imager](https://github.com/raspberrypi/rpi-imager) |
+| sys-boot/usbimager     | [https://gitlab.com/bztsrc/usbimager](https://gitlab.com/bztsrc/usbimager)             |
 | sys-boot/ventoy-bin    | [https://www.ventoy.net/en/index.html](https://www.ventoy.net/en/index.html)           |
 
 <!-- Links -->

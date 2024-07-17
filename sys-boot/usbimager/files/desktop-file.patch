@@ -1,0 +1,15 @@
+diff --git a/usr/share/applications/usbimager.desktop b/usr/share/applications/usbimager.desktop
+index a328b53..0664ebe 100644
+--- a/usr/share/applications/usbimager.desktop
++++ b/usr/share/applications/usbimager.desktop
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Version=1.0.10
+ Type=Application
+ Name=USBImager
+ Comment=Write image files to USB devices
+@@ -7,4 +6,3 @@
+ Icon=usbimager
+ Terminal=false
+ StartupNotify=false
+-Categories=Application;System;
