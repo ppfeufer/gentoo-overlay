@@ -7,7 +7,7 @@ ______________________________________________________________________
 - [Add this repository](#add-this-repository)
   - [Using `eselect-repository`](#using-eselect-repository)
   - [Using `layman`](#using-layman)
-  - [Packages](#packages)
+- [Packages](#packages)
 
 <!-- mdformat-toc end -->
 
@@ -42,7 +42,7 @@ See [layman]
 layman -fa ppfeufer-gentoo-overlay
 ```
 
-### Packages<a name="packages"></a>
+## Packages<a name="packages"></a>
 
 | Package                | URL                                                                                    |
 | :--------------------- | :------------------------------------------------------------------------------------- |
