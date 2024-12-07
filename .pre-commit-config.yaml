@@ -74,6 +74,6 @@ repos:
             .github/
           )
         additional_dependencies:  # https://mdformat.readthedocs.io/en/stable/users/plugins.html#code-formatter-plugins
-          - mdformat-gfm==0.3.6  # Mdformat plugin for GitHub Flavored Markdown compatibility » https://github.com/hukkin/mdformat-gfm/tags
+          - mdformat-gfm==0.3.7  # Mdformat plugin for GitHub Flavored Markdown compatibility » https://github.com/hukkin/mdformat-gfm/tags
           - mdformat-toc==0.3.0  # Mdformat plugin to generate a table of contents » https://github.com/hukkin/mdformat-toc/tags
           - mdformat-shfmt==0.2.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags

@@ -2,13 +2,12 @@
 
 ______________________________________________________________________
 
-<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
+<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=2 -->
 
-- [Portage Repository "ppfeufer-gentoo-overlay"](#portage-repository-ppfeufer-gentoo-overlay)
-  - [Add this repository](#add-this-repository)
-    - [Using `eselect-repository`](#using-eselect-repository)
-    - [Using `layman`](#using-layman)
-    - [Packages](#packages)
+- [Add this repository](#add-this-repository)
+  - [Using `eselect-repository`](#using-eselect-repository)
+  - [Using `layman`](#using-layman)
+  - [Packages](#packages)
 
 <!-- mdformat-toc end -->
 
