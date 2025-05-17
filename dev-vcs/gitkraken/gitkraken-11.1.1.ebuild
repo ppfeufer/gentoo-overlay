@@ -6,7 +6,8 @@ EAPI=8
 inherit unpacker xdg
 DESCRIPTION="cross-platform Git client"
 HOMEPAGE="https://www.gitkraken.com"
-SRC_URI="https://release.axocdn.com/linux/GitKraken-v${PV}.deb"
+#SRC_URI="https://release.axocdn.com/linux/GitKraken-v${PV}.deb"
+SRC_URI="https://release.gitkraken.dev/production/normal/linux/x64/${PV}/2x6KtzRCtylQMRRNjwQzVAU8ken/gitkraken-amd64.deb -> GitKraken-v${PV}.deb"
 
 SLOT="0"
 KEYWORDS="~amd64"
