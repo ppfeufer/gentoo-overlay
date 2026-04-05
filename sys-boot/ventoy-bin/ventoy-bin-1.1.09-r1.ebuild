@@ -5,25 +5,34 @@ EAPI=8
 
 inherit desktop xdg
 
-DESCRIPTION="A new multiboot USB solution"
-HOMEPAGE="http://www.ventoy.net"
+DESCRIPTION="Creator of bootable USBs, with ability to copy ISOs, persistence storage"
+HOMEPAGE="https://www.ventoy.net"
 SRC_URI="https://github.com/ventoy/Ventoy/releases/download/v${PV}/ventoy-${PV}-linux.tar.gz"
+
+S="${WORKDIR}"/ventoy-${PV}
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 RESTRICT="strip mirror"
 
-DEPEND="
+RDEPEND="
+	app-accessibility/at-spi2-core:2
+	dev-libs/glib:2
 	sys-fs/dosfstools
-	sys-fs/exfatprogs
+	|| ( sys-fs/exfatprogs sys-fs/exfat-utils )
+	sys-fs/fuse-exfat
 	sys-block/parted
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf:2
+	x11-libs/gtk+:3
+	x11-libs/pango
 "
-RDEPEND="${DEPEND}"
+# sys-fs/fuse-exfat is needed for mount, without it:
+# mount: /mnt: unknown filesystem type 'exfat'
 
-S=${WORKDIR}/ventoy-${PV}
+QA_PREBUILT="*" # Against "does not respect LDFLAGS"
 
 CARCH="x86_64"
 
