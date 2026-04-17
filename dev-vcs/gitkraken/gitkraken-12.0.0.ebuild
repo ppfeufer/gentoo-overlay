@@ -6,8 +6,8 @@ EAPI=8
 inherit unpacker xdg
 DESCRIPTION="cross-platform Git client"
 HOMEPAGE="https://www.gitkraken.com"
-#SRC_URI="https://release.axocdn.com/linux/GitKraken-v${PV}.deb"
-SRC_URI="https://release.gitkraken.dev/gkd/production/normal/linux/x64/${PV}/2zNGgfbnHpIvHqudcMJWWd08hb2/gitkraken-amd64.deb -> GitKraken-v${PV}.deb"
+DL_HASH="3CMNjIjEcMPdoGlHLfbICPzTFns"
+SRC_URI="https://release.gitkraken.dev/gkd/production/normal/linux/x64/${PV}/${DL_HASH}/gitkraken-amd64.deb -> GitKraken-v${PV}.deb"
 
 SLOT="0"
 KEYWORDS="~amd64"
@@ -78,6 +78,7 @@ src_install() {
 	rm -rf "${S}"/usr/share/gitkraken/resources/app.asar.unpacked/node_modules/@axosoft/nodegit/build/Release/nodegit-ubuntu-18-ssl-1.1.0.node
 	rm -rf "${S}"/usr/share/gitkraken/resources/app.asar.unpacked/node_modules/@axosoft/nodegit/build/Release/nodegit-ubuntu-18-ssl-10.node
 	rm -rf "${S}"/usr/share/gitkraken/resources/app.asar.unpacked/node_modules/@axosoft/nodegit/build/Release/nodegit-ubuntu-18.node
+	rm -rf "${S}"/usr/share/gitkraken/resources/app.asar.unpacked/node_modules/@axosoft/nodegit/build/Release/nodegit-ubuntu-20.node
 	rm -rf "${S}"/usr/share/gitkraken/resources/app.asar.unpacked/node_modules/@axosoft/nodegit/build/Release/nodegit.node
 
 	rm -rf "${S}"/usr/share/gitkraken/resources/app.asar.unpacked/node_modules/@msgpackr-extract/msgpackr-extract-linux-x64/node.napi.musl.node
